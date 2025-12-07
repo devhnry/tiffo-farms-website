@@ -46,7 +46,7 @@ export const WhatWeDo = () => {
             {index === 1 && (
               <div className="mt-4">
                 <div className="bg-gray-100 border-2 border-black/20 rounded-xl w-full h-48 flex items-center justify-center text-gray-400">
-                  Image will be here
+                  ...
                 </div>
               </div>
             )}
