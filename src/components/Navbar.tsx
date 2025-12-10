@@ -4,15 +4,15 @@ import { Menu, X } from "lucide-react";
 export const Navbar = () => {
   
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const navMenus = ['About', 'Services', 'Values']
+  const navMenus = ['About', 'Services', 'Values', 'Products']
   
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   }
   
   return (
-    <nav className={`relative`}>
-      <div className={`bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy rounded-2xl flex items-center px-4 py-[4px] justify-between max-w-[720px] mx-auto xl:border-none xl:bg-[#F3F3F3] xl:max-w-[1048px] transition fixed top-[16px] left-[16px] right-[16px]`}>
+    <nav className={`relative z-50`}>
+      <div className={`bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl flex items-center px-4 py-[4px] justify-between max-w-[720px] mx-auto xl:bg-[#F3F3F3] xl:max-w-[1048px] transition fixed top-[16px] left-[16px] right-[16px]`}>
         <div className={`font-bold text-[18px] flex items-center gap-1`}>
           <img src={`/logo-ph.png`} alt={`Logo`} className={`size-[24px] `}/>
           <p>Tiffo</p>
