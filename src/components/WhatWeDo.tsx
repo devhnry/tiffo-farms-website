@@ -36,7 +36,7 @@ export const WhatWeDo = () => {
         <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[200px] -left-[70px] -z-10 rounded-xl -rotate-[15deg] overflow-hidden shadow-fancy-two`}>
           <img
             className="absolute inset-0 -z-10 h-full w-full object-cover"
-            src="/assets/img/what-we-do-3.jpg"
+            src="/assets/img/catfish-1.jpg"
             alt="landing"
           />
         </div>
@@ -44,7 +44,7 @@ export const WhatWeDo = () => {
         <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[230px] left-[30px] -z-10 rounded-xl rotate-[5deg] overflow-hidden shadow-button`}>
           <img
             className="absolute inset-0 -z-10 h-full w-full object-cover"
-            src="/assets/img/what-we-do.jpg"
+            src="/assets/img/catfish-2.jpg"
             alt="landing"
           />
         </div>
@@ -68,7 +68,7 @@ export const WhatWeDo = () => {
                 <div className="bg-gray-100 border-2 border-white/50 rounded-xl w-full h-48 flex items-center justify-center text-gray-400 relative overflow-hidden">
                   <img
                     className="absolute inset-0 h-full w-full object-cover scale-140 bg-top-left"
-                    src="/assets/img/modern-feedmill.jpg"
+                    src="/assets/img/building-3.jpg"
                     alt="landing"
                   />
                 </div>

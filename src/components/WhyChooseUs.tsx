@@ -9,7 +9,7 @@ export const WhyChooseUs = () => {
       title: "Sustainability Grown",
       desc: "Healthy animals, healthy soils, healthy communities.",
       image: true,
-      img: "/assets/img/traditional-farming.jpg"
+      img: "/assets/img/bang-2.jpg"
     },
     {
       icon: <Lightbulb className="text-white text-[20px]" />,
@@ -26,7 +26,7 @@ export const WhyChooseUs = () => {
       title: "Quality you can Trust",
       desc: "Every batch of feed is tested for protein, energy, and digestibility",
       image: true,
-      img: "/assets/img/quality.jpg"
+      img: "/assets/img/hand-9mm.jpg"
     },
   ];
   
@@ -50,16 +50,16 @@ export const WhyChooseUs = () => {
         <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[200px] -right-[70px] -z-10 rounded-xl rotate-[15deg] overflow-hidden shadow-fancy-two`}>
           <img
             className="absolute inset-0 -z-10 h-full w-full object-cover"
-            src="/assets/img/quality.jpg"
-            alt="landing"
+            src="/assets/img/catfish-3.jpg"
+            alt=""
           />
         </div>
         
         <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[230px] right-[30px] -z-10 rounded-xl -rotate-[5deg] overflow-hidden shadow-button`}>
           <img
             className="absolute inset-0 -z-10 h-full w-full object-cover"
-            src="/assets/img/what-we-do.jpg"
-            alt="landing"
+            src="/assets/img/catfish-5.jpg"
+            alt=""
           />
         </div>
         

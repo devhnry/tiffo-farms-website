@@ -24,24 +24,24 @@ export const MissionAndVision = () => {
         <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[200px] -right-[70px] -z-10 rounded-xl rotate-[15deg] overflow-hidden shadow-fancy-two`}>
           <img
             className="absolute inset-0 -z-10 h-full w-full object-cover"
-            src="/assets/img/what-we-do-5.jpg"
-            alt="landing"
+            src="/assets/img/tilapia-3.jpg"
+            alt=""
           />
         </div>
         
         <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[230px] right-[30px] -z-10 rounded-xl rotate-[0deg] overflow-hidden shadow-button`}>
           <img
             className="absolute inset-0 -z-10 h-full w-full object-cover"
-            src="/assets/img/what-we-do-2.jpg"
-            alt="landing"
+            src="/assets/img/bang-5.jpg"
+            alt=""
           />
         </div>
         
         <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[200px] right-[120px] -z-10 rounded-xl -rotate-[15deg] overflow-hidden shadow-fancy-two`}>
           <img
             className="absolute inset-0 -z-10 h-full w-full object-cover"
-            src="/assets/img/what-we-do-4.jpg"
-            alt="landing"
+            src="/assets/img/bang-1.jpg"
+            alt=""
           />
         </div>
         
