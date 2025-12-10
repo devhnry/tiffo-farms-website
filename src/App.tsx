@@ -7,17 +7,19 @@ import { CoreValues } from "./components/CoreValues.tsx";
 import { ContactUs } from "./components/ContactUs.tsx";
 import { MissionAndVision } from "./components/MissionAndVision.tsx";
 import { Footer } from "./components/Footer.tsx";
+import { Products } from "./components/Products.tsx";
 
 function App() {
 
   return (
     <>
-      <main className={`max-w-[1440px] mx-auto px-4 w-full mt-4 overflow-y-hidden`}>
+      <main className={`max-w-[1440px] mx-auto w-full overflow-y-hidden`}>
         <Navbar />
         <HeroArea />
         <AboutUsPage />
         <WhatWeDo />
         <WhyChooseUs />
+        <Products />
         <MissionAndVision />
         <CoreValues />
         <ContactUs />
