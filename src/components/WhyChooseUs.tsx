@@ -5,27 +5,29 @@ export const WhyChooseUs = () => {
   
   const data = [
     {
+      icon: <Sprout className="text-white text-[20px]" />,
+      title: "Sustainability Grown",
+      desc: "Healthy animals, healthy soils, healthy communities.",
+      image: true,
+      img: "/assets/img/traditional-farming.jpg"
+    },
+    {
       icon: <Lightbulb className="text-white text-[20px]" />,
       title: "Innovation Driven",
       desc: "We blend traditional farming knowledge with modern research",
-      image: true
-    },
-    {
-      icon: <Sprout className="text-white text-[20px]" />,
-      title: "Sustainability Grown",
-      desc: "Healthy animals, healthy soils, healthy communities."
-    },
-    {
-      icon: <CheckCircle className="text-white text-[20px]" />,
-      title: "Quality you can Trust",
-      desc: "Every batch of feed is tested for protein, energy, and digestibility",
     },
     {
       icon: <Users className="text-white text-[20px]" />,
       title: "Farmer Focused",
       desc: "For commercial growers and smallholders, our feeds and services are tailored to help you succeed.",
-      image: true
-    }
+    },
+    {
+      icon: <CheckCircle className="text-white text-[20px]" />,
+      title: "Quality you can Trust",
+      desc: "Every batch of feed is tested for protein, energy, and digestibility",
+      image: true,
+      img: "/assets/img/quality.jpg"
+    },
   ];
   
   return (
@@ -41,7 +43,27 @@ export const WhyChooseUs = () => {
         </p>
       </div>
       
-      <div className={`alternate-grid bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-3 flex flex-col gap-4 my-8 xl:grid grid-cols-3`}>
+      <div className={`alternate-grid bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-3 flex flex-col gap-4 my-8 xl:grid grid-cols-3 relative`}>
+        
+        
+        
+        <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[200px] -right-[70px] -z-10 rounded-xl rotate-[15deg] overflow-hidden shadow-fancy-two`}>
+          <img
+            className="absolute inset-0 -z-10 h-full w-full object-cover"
+            src="/assets/img/quality.jpg"
+            alt="landing"
+          />
+        </div>
+        
+        <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[230px] right-[30px] -z-10 rounded-xl -rotate-[5deg] overflow-hidden shadow-button`}>
+          <img
+            className="absolute inset-0 -z-10 h-full w-full object-cover"
+            src="/assets/img/what-we-do.jpg"
+            alt="landing"
+          />
+        </div>
+        
+        
         {data.map((item, index) => (
           <div
             key={index}
@@ -51,8 +73,15 @@ export const WhyChooseUs = () => {
             `}
           >
             {item.image && (
-              <div className="max-w-[250px w-full min-h-[135px] h-full bg-gray-200 rounded-lg shadow-fancy-two" />
+              <div className="max-w-[250px w-full min-h-[135px] h-full bg-gray-200 rounded-lg shadow-fancy-two relative overflow-hidden" >
+                <img
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src={item.img}
+                  alt=""
+                />
+              </div>
             )}
+            
             <div>
               <div className={`bg-[#115B02] rounded-2xl p-3 w-fit shadow-button mb-3`}>
                 {item.icon}
