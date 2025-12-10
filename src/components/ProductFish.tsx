@@ -7,7 +7,7 @@ interface Props {
 export const ProductFish = ({ title, features, image}: Props) => {
   
   return (
-    <div className={`max-w-[400px] w-full bg-[#F5F5F5] border-white border-[2px] shadow-fancy-two rounded-[16px] overflow-hidden`}>
+    <div className={`max-w-[400px] w-full bg-[#F5F5F5] border-white border-[2px] shadow-fancy-two rounded-[16px] overflow-hidden h-full flex-1`}>
       
       <div className={`relative pb-4 size-[250px] w-full`}>
         {/*<img className={`absolute z-20 rounded-full top-4 right-4 shadow-fancy-two border-white border-[0.5px] size-[100px] object-cover `} src={`${sub}`} alt={''} />*/}

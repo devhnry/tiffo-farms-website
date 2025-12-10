@@ -31,7 +31,7 @@ export const WhyChooseUs = () => {
   ];
   
   return (
-    <section className={`max-w-[720px] xl:max-w-[1100px] mx-auto w-full pb-16 xl:pb-24`}>
+    <section className={`max-w-[720px] md:max-w-[1100px] mx-auto w-full pt-16 pb-16 xl:pb-24 px-5`}>
       <Subheading icon={<WandSparkles className={`subheading-icon`} />} text={'Services'} />
       
       <div className={`text-center flex flex-col gap-3 py-[16px] px-3`}>
@@ -43,11 +43,9 @@ export const WhyChooseUs = () => {
         </p>
       </div>
       
-      <div className={`alternate-grid bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-3 flex flex-col gap-4 my-8 xl:grid grid-cols-3 relative`}>
+      <div className={`alternate-grid bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-3 flex flex-col gap-4 my-8 lg:grid grid-cols-3 relative`}>
         
-        
-        
-        <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[200px] -right-[70px] -z-10 rounded-xl rotate-[15deg] overflow-hidden shadow-fancy-two`}>
+        <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[260px] -right-[140px] 2xs:-top-[200px] 2xs:-right-[100px] md:-right-[70px] -z-10 rounded-xl rotate-[15deg] overflow-hidden shadow-fancy-two`}>
           <img
             className="absolute inset-0 -z-10 h-full w-full object-cover"
             src="/assets/img/catfish-3.jpg"
@@ -55,7 +53,7 @@ export const WhyChooseUs = () => {
           />
         </div>
         
-        <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[230px] right-[30px] -z-10 rounded-xl -rotate-[5deg] overflow-hidden shadow-button`}>
+        <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[295px] -right-[120px]  2xs:-top-[230px] 2xs:-right-[40px] md:right-[10px] -z-10 rounded-xl -rotate-[5deg] overflow-hidden shadow-button`}>
           <img
             className="absolute inset-0 -z-10 h-full w-full object-cover"
             src="/assets/img/catfish-5.jpg"

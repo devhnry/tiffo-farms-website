@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <main className={`max-w-[1440px] mx-auto w-full overflow-y-hidden`}>
+      <main className={`max-w-[1440px] mx-auto w-full overflow-hidden`}>
         <Navbar />
         <HeroArea />
         <AboutUsPage />
@@ -23,7 +23,9 @@ function App() {
         <MissionAndVision />
         <CoreValues />
         <ContactUs />
-        <Footer />
+        <div className={`px-5`}>
+          <Footer />
+        </div>
       </main>
     </>
   )

@@ -6,9 +6,9 @@ export const AboutUsPage = () => {
     <section className={`pb-16 lg:pb-20 mt-[100px]`}>
       <Subheading icon={<Leaf className={`subheading-icon`} />} text={'About Tiffo'}/>
       
-      <div className={`grid grid-cols-2 items-start gap-6 py-[60px] px-6 max-w-[1240px] mx-auto w-full`}>
+      <div className={`grid grid-cols-1 md:grid-cols-2 items-start gap-6 py-[60px] px-6 max-w-[1240px] mx-auto w-full`}>
         <div id={'about'}
-             className={`text-[18px] lg:text-[22px] font-medium flex flex-col gap-4 lg:gap-6 py-[20px] text-[#636363] px-3 max-w-[650px] lg:max-w-[700px] mx-auto w-full transition`}>
+             className={`text-[18px] text-center md:text-left lg:text-[22px] font-medium flex flex-col gap-4 lg:gap-6 py-[20px] text-[#636363] px-3 max-w-[650px] lg:max-w-[700px] mx-auto w-full transition`}>
           <p>At <span className={`font-bold text-[#003905]`}>Tiffo Farms and Feedmill Limited</span>, our story began
             with a simple belief: good farming starts with good feed, and good feed starts with care.</p>
           

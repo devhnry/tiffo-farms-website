@@ -21,7 +21,7 @@ export const WhatWeDo = () => {
   }]
   
   return (
-    <section className={`max-w-[720px] xl:max-w-[1100px] mx-auto w-full pb-16 lg:pb-24`}>
+    <section className={`max-w-[720px] px-5 md:max-w-[1100px] mx-auto w-full pb-16 lg:pb-24`}>
       <Subheading icon={<Briefcase className={`subheading-icon`} />} text={'Our Capabilities'} />
       <div className={`text-center flex flex-col gap-3 py-[16px] px-3`}>
         <h2 className={`font-bold text-[#2E3B2E] text-[clamp(30px,calc(30px+(40-30)*((100vw-375px)/1065)),40px)]`}>What Tiffo Does</h2>
@@ -33,7 +33,8 @@ export const WhatWeDo = () => {
       
       <div className={`bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-3 flex flex-col gap-4 my-8 2md:grid 2md:grid-cols-2 md:gap-2 relative`}>
         
-        <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[200px] -left-[70px] -z-10 rounded-xl -rotate-[15deg] overflow-hidden shadow-fancy-two`}>
+        <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[240px] -left-[140px] 2xs:-top-[200px] 2xs:-left-[100px] md:-left-[50px] -z-10 rounded-xl -rotate-[15deg] overflow-hidden shadow-fancy-two
+        `}>
           <img
             className="absolute inset-0 -z-10 h-full w-full object-cover"
             src="/assets/img/catfish-1.jpg"
@@ -41,14 +42,13 @@ export const WhatWeDo = () => {
           />
         </div>
         
-        <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[230px] left-[30px] -z-10 rounded-xl rotate-[5deg] overflow-hidden shadow-button`}>
+        <div className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[280px] -left-[100px] -z-10  2xs:-top-[230px] 2xs:-left-[40px] md:left-[30px] rounded-xl rotate-[5deg] overflow-hidden shadow-button`}>
           <img
             className="absolute inset-0 -z-10 h-full w-full object-cover"
             src="/assets/img/catfish-2.jpg"
             alt="landing"
           />
         </div>
-        
         
         {data.map((item, index) => (
           <div 

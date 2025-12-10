@@ -105,7 +105,7 @@ export const Products = () => {
   ];
   
   return (
-    <section className="max-w-[1100px] mx-auto w-full pt-8 pb-16 xl:pb-24">
+    <section className="max-w-[1100px] mx-auto w-full pt-8 pb-16 xl:pb-24 px-5">
       
       {/* Header */}
       <div className="bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-full w-fit text-[14px] px-1 pr-2 py-0.5 ml-2.5 flex items-center gap-2">
@@ -150,7 +150,7 @@ export const Products = () => {
       {/* Products grid with fade transition */}
       <div className="pt-[40px]">
         <div
-          className={`grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-300 ease-in-out ${
+          className={`grid grid-cols-1 w-fit mx-auto items-start place-items-center md:grid-cols-2 2lg:grid-cols-3 gap-6 transition-all duration-300 ease-in-out ${
             activeTab === "feeds"
               ? "opacity-100 translate-y-0"
               : "opacity-0 -translate-y-2 pointer-events-none hidden"
@@ -162,7 +162,7 @@ export const Products = () => {
         </div>
         
         <div
-          className={`grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-300 ease-in-out ${
+          className={`grid grid-cols-1 items-start place-items-center md:grid-cols-2 2lg:grid-cols-3 gap-6 transition-all duration-300 ease-in-out w-fit mx-auto ${
             activeTab === "fish"
               ? "opacity-100 translate-y-0"
               : "opacity-0 -translate-y-2 pointer-events-none hidden"

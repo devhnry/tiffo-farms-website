@@ -9,7 +9,7 @@ interface Props {
 export const ProductFeed = ({ title, desc, features, sub, img}: Props) => {
   
   return (
-    <div className={`max-w-[400px] w-full bg-[#F5F5F5] border-white border-[2px] shadow-fancy-two rounded-[16px] overflow-hidden`}>
+    <div className={`max-w-[400px] w-full bg-[#F5F5F5] border-white border-[2px] shadow-fancy-two rounded-[16px] overflow-hidden flex-1 h-full`}>
       
       <div className={`relative`}>
         <img className={`absolute z-20 rounded-full top-4 right-4 shadow-fancy-two border-white border-[0.5px] size-[100px] object-cover `} src={`${sub}`} alt={''} />

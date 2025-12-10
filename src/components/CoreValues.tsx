@@ -39,7 +39,7 @@ export const CoreValues = () => {
   ];
   
   return (
-    <section className={`max-w-[720px] xl:max-w-[1100px] mx-auto w-full mt-8 pb-16 xl:pb-24`}>
+    <section className={`max-w-[720px] px-5 xl:max-w-[1100px] mx-auto w-full mt-8 pb-16 xl:pb-24`}>
       <Subheading
         icon={<HeartHandshake className={`subheading-icon`} />}
         text={'Values'}
