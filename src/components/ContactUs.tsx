@@ -1,7 +1,7 @@
-export const ContactUs = () => {
-  return (
-    <div>
-    
-    </div>
-  )
-}
+import { forwardRef } from "react";
+
+export const ContactUs = forwardRef<HTMLElement>((props, ref) => {
+  return <section ref={ref}></section>;
+});
+
+ContactUs.displayName = "ContactUs";

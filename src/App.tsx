@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Navbar } from "./components/Navbar.tsx";
 import { HeroArea } from "./components/Hero.tsx";
 import { AboutUsPage } from "./components/AboutUs.tsx";
@@ -10,25 +11,36 @@ import { Footer } from "./components/Footer.tsx";
 import { Products } from "./components/Products.tsx";
 
 function App() {
+  const aboutRef = useRef<HTMLElement>(null);
+  const servicesRef = useRef<HTMLElement>(null);
+  const valuesRef = useRef<HTMLElement>(null);
+  const productsRef = useRef<HTMLElement>(null);
+
+  const sectionRefs = [
+    aboutRef,
+    servicesRef,
+    productsRef,
+    valuesRef,
+  ];
 
   return (
     <>
       <main className={`max-w-[1440px] mx-auto w-full overflow-hidden`}>
-        <Navbar />
+        <Navbar sectionRefs={sectionRefs} />
         <HeroArea />
-        <AboutUsPage />
-        <WhatWeDo />
+        <AboutUsPage ref={aboutRef} />
+        <WhatWeDo ref={servicesRef} />
         <WhyChooseUs />
-        <Products />
+        <Products ref={productsRef} />
         <MissionAndVision />
-        <CoreValues />
+        <CoreValues ref={valuesRef} />
         <ContactUs />
         <div className={`px-5`}>
           <Footer />
         </div>
       </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
