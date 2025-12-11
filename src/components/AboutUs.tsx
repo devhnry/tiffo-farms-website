@@ -1,11 +1,11 @@
 import { forwardRef } from "react";
 import { Leaf } from "lucide-react";
 import { Subheading } from "./Subheading.tsx";
-import { AnimatedSection } from "./AnimatedSection.tsx";
+import { images } from "../constants";
 
 export const AboutUsPage = forwardRef<HTMLElement>((_props, ref) => {
   return (
-    <section ref={ref} className={`pb-16 lg:pb-20 mt-[100px]`}>
+    <section id={"about"} ref={ref} className={`pb-16 lg:pb-20 mt-[100px] pt-16`}>
       <Subheading
         icon={<Leaf className={`subheading-icon`} />}
         text={"About Tiffo"}
@@ -14,11 +14,9 @@ export const AboutUsPage = forwardRef<HTMLElement>((_props, ref) => {
       <div
         className={`grid grid-cols-1 md:grid-cols-2 items-start gap-6 py-[60px] px-6 max-w-[1240px] mx-auto w-full`}
       >
-        <AnimatedSection delay={0.1}>
-          <div
-            id={"about"}
-            className={`text-[18px] text-center md:text-left lg:text-[22px] font-medium flex flex-col gap-4 lg:gap-6 py-[20px] text-[#636363] px-3 max-w-[650px] lg:max-w-[700px] mx-auto w-full transition`}
-          >
+        <div
+          className={`text-[18px] text-center md:text-left lg:text-[22px] font-medium flex flex-col gap-4 lg:gap-6 py-[20px] text-[#636363] px-3 max-w-[650px] lg:max-w-[700px] mx-auto w-full transition`}
+        >
             <p>
               At{" "}
               <span className={`font-bold text-[#003905]`}>
@@ -43,20 +41,10 @@ export const AboutUsPage = forwardRef<HTMLElement>((_props, ref) => {
               growers committed to leaving the soil richer, the animals
               healthier, and the people stronger.
             </p>
-          </div>
-        </AnimatedSection>
-        <AnimatedSection className={`h-full`} delay={0.4}>
-          <div
-            className={`relative rounded-2xl overflow-hidden h-full shadow-fancy-two`}
-          >
-            {/*<div className="pointer-events-none absolute bottom-0 z-10 left-0 w-full inset-0 bg-gradient-to-l from-[#F3F3F3] via-[#F3F3F3]/10 to-transparent backdrop-blur-[0.5px]" />*/}
-            <img
-              className="h-full w-full object-cover"
-              src="/assets/img/about.jpg"
-              alt="landing"
-            />
-          </div>
-        </AnimatedSection>
+        </div>
+        <div className={`relative rounded-2xl overflow-hidden h-full shadow-fancy-two`}>
+          <img className="h-full w-full object-cover" src={images.about} alt="" />
+        </div>
       </div>
     </section>
   );

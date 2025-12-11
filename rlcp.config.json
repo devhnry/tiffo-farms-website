@@ -1,0 +1,8 @@
+{
+  "input": "public/assets/img",
+  "output": "temp_public",
+  "blacklists": ["public/brand/**"],
+  "file_size": "small",
+  "preferred_type": "webp",
+  "working_directory": "./"
+}

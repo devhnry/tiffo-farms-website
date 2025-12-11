@@ -1,7 +1,8 @@
 import { forwardRef } from "react";
 import { motion } from "motion/react";
+import { images } from "../constants";
 
-export const HeroArea = forwardRef<HTMLElement>((props, ref) => {
+export const HeroArea = forwardRef<HTMLElement>((_props, ref) => {
   return (
     <section
       ref={ref}
@@ -10,21 +11,21 @@ export const HeroArea = forwardRef<HTMLElement>((props, ref) => {
       {/* Background image */}
       <img
         className="absolute inset-0 -z-10 h-full w-full object-cover"
-        src="/assets/img/Landing.jpg"
-        alt="landing"
+        src={images.landing}
+        alt=""
       />
 
       {/*/!* Top white fade *!/*/}
       {/*<div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#F3F3F3] via-[#F3F3F3]/50 to-transparent" />*/}
 
       {/* Bottom blur + white fade */}
-      <div className="pointer-events-none absolute bottom-0 -z-10 left-0 w-full inset-0 bg-gradient-to-t from-[#F3F3F3] via-[#F3F3F3]/40 to-transparent backdrop-blur-[3px]" />
+      <div className="pointer-events-none absolute bottom-0 -z-10 left-0 w-full inset-0 bg-gradient-to-t from-[#F3F3F3] via-[#F3F3F3]/40 to-transparent backdrop-blur-[0.5px]" />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        style={{ willChange: 'transform, opacity' }}
+        style={{ willChange: "transform, opacity" }}
         className={`bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl w-fit text-[14px] px-2 py-0.5 mx-auto`}
       >
         <p>🌿 Tiffo Farms and Feedmill Limited</p>
@@ -33,8 +34,12 @@ export const HeroArea = forwardRef<HTMLElement>((props, ref) => {
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-          style={{ willChange: 'transform, opacity' }}
+          transition={{
+            duration: 0.9,
+            delay: 0.4,
+            ease: [0.25, 0.46, 0.45, 0.94],
+          }}
+          style={{ willChange: "transform, opacity" }}
           className={`text-[#1A1A1A] text-[clamp(32px,calc(32px+(70-32)*((100vw-375px)/1065)),70px)] tracking-[0.5px] font-bold leading-[clamp(40px,calc(40px+(78-40)*((100vw-375px)/1065)),78px)] text-center py-4 xl:py-6`}
         >
           Nourishing Livestock, <br />
@@ -44,7 +49,7 @@ export const HeroArea = forwardRef<HTMLElement>((props, ref) => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          style={{ willChange: 'transform, opacity' }}
+          style={{ willChange: "transform, opacity" }}
           className={`text-[#000500]/80 leading-[24px] text-center text-[14px] xl:text-[16px] max-w-[343px] xl:max-w-[450px] w-full mx-auto`}
         >
           Integrated farm and feed-mill, producing nutritious feeds, healthy
@@ -56,7 +61,7 @@ export const HeroArea = forwardRef<HTMLElement>((props, ref) => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-        style={{ willChange: 'transform, opacity' }}
+        style={{ willChange: "transform, opacity" }}
         className={`flex gap-4 items-center w-fit mx-auto py-6 xl:py-8`}
       >
         <button

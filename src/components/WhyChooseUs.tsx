@@ -6,7 +6,7 @@ import {
   Users,
   WandSparkles,
 } from "lucide-react";
-import { AnimatedSection } from "./AnimatedSection.tsx";
+import { images } from "../constants";
 
 export const WhyChooseUs = () => {
   const data = [
@@ -15,7 +15,7 @@ export const WhyChooseUs = () => {
       title: "Sustainability Grown",
       desc: "Healthy animals, healthy soils, healthy communities.",
       image: true,
-      img: "/assets/img/bang-2.jpg",
+      img: images.bang2,
     },
     {
       icon: <Lightbulb className="text-white text-[20px]" />,
@@ -32,12 +32,13 @@ export const WhyChooseUs = () => {
       title: "Quality you can Trust",
       desc: "Every batch of feed is tested for protein, energy, and digestibility",
       image: true,
-      img: "/assets/img/hand-9mm.jpg",
+      img: images.hand9mm,
     },
   ];
 
   return (
     <section
+      id="services"
       className={`max-w-[720px] md:max-w-[1100px] mx-auto w-full pt-16 pb-16 xl:pb-24 px-5`}
     >
       <Subheading
@@ -59,16 +60,15 @@ export const WhyChooseUs = () => {
         </p>
       </div>
 
-      <AnimatedSection>
-        <div
-          className={`alternate-grid bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-3 flex flex-col gap-4 my-8 lg:grid grid-cols-3 relative`}
-        >
+      <div
+        className={`alternate-grid bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-3 flex flex-col gap-4 my-8 lg:grid grid-cols-3 relative`}
+      >
           <div
             className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[260px] -right-[140px] 2xs:-top-[200px] 2xs:-right-[100px] md:-right-[70px] -z-10 rounded-xl rotate-[15deg] overflow-hidden shadow-fancy-two`}
           >
             <img
               className="absolute inset-0 -z-10 h-full w-full object-cover"
-              src="/assets/img/catfish-3.jpg"
+              src={images.catfish3}
               alt=""
             />
           </div>
@@ -78,7 +78,7 @@ export const WhyChooseUs = () => {
           >
             <img
               className="absolute inset-0 -z-10 h-full w-full object-cover"
-              src="/assets/img/catfish-5.jpg"
+              src={images.catfish5}
               alt=""
             />
           </div>
@@ -119,7 +119,6 @@ export const WhyChooseUs = () => {
             </div>
           ))}
         </div>
-      </AnimatedSection>
-    </section>
+      </section>
   );
 };

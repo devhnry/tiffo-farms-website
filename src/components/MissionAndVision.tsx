@@ -1,5 +1,5 @@
 import { Target, Globe } from "lucide-react";
-import { AnimatedSection } from "./AnimatedSection.tsx";
+import { images } from "../constants";
 
 export const MissionAndVision = () => {
   return (
@@ -22,14 +22,13 @@ export const MissionAndVision = () => {
         </p>
       </div>
 
-      <AnimatedSection>
-        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5 relative">
+      <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-5 relative">
           <div
             className={`border-white border-[1.5px] hidden md:block bg-black/50 size-[150px] absolute -top-[200px] -right-[70px] -z-10 rounded-xl rotate-[15deg] overflow-hidden shadow-fancy-two`}
           >
             <img
               className="absolute inset-0 -z-10 h-full w-full object-cover"
-              src="/assets/img/tilapia-3.jpg"
+              src={images.tilapia3}
               alt=""
             />
           </div>
@@ -39,7 +38,7 @@ export const MissionAndVision = () => {
           >
             <img
               className="absolute inset-0 -z-10 h-full w-full object-cover"
-              src="/assets/img/bang-5.jpg"
+              src={images.bang5}
               alt=""
             />
           </div>
@@ -49,7 +48,7 @@ export const MissionAndVision = () => {
           >
             <img
               className="absolute inset-0 -z-10 h-full w-full object-cover"
-              src="/assets/img/bang-1.jpg"
+              src={images.bang1}
               alt=""
             />
           </div>
@@ -85,7 +84,6 @@ export const MissionAndVision = () => {
             </p>
           </div>
         </div>
-      </AnimatedSection>
-    </section>
+      </section>
   );
 };

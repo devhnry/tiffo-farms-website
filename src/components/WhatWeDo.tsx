@@ -1,9 +1,9 @@
 import { forwardRef } from "react";
 import { Subheading } from "./Subheading.tsx";
 import { Briefcase, Factory, Leaf, Recycle } from "lucide-react";
-import { AnimatedSection } from "./AnimatedSection.tsx";
+import { images } from "../constants";
 
-export const WhatWeDo = forwardRef<HTMLElement>((props, ref) => {
+export const WhatWeDo = forwardRef<HTMLElement>((_props, ref) => {
   const data = [
     {
       icon: <Leaf className="text-white text-[20px]" />,
@@ -51,30 +51,29 @@ export const WhatWeDo = forwardRef<HTMLElement>((props, ref) => {
         </p>
       </div>
 
-      <AnimatedSection>
+      <div
+        className={`bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-3 flex flex-col gap-4 my-8 2md:grid 2md:grid-cols-2 md:gap-2 relative`}
+      >
         <div
-          className={`bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-3 flex flex-col gap-4 my-8 2md:grid 2md:grid-cols-2 md:gap-2 relative`}
-        >
-          <div
-            className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[240px] -left-[140px] 2xs:-top-[200px] 2xs:-left-[100px] md:-left-[50px] -z-10 rounded-xl -rotate-[15deg] overflow-hidden shadow-fancy-two
+          className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[240px] -left-[140px] 2xs:-top-[200px] 2xs:-left-[100px] md:-left-[50px] -z-10 rounded-xl -rotate-[15deg] overflow-hidden shadow-fancy-two
           `}
-          >
-            <img
-              className="absolute inset-0 -z-10 h-full w-full object-cover"
-              src="/assets/img/catfish-1.jpg"
-              alt="landing"
-            />
-          </div>
+        >
+          <img
+            className="absolute inset-0 -z-10 h-full w-full object-cover"
+            src={images.catfish1}
+            alt=""
+          />
+        </div>
 
-          <div
-            className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[280px] -left-[100px] -z-10  2xs:-top-[230px] 2xs:-left-[40px] md:left-[30px] rounded-xl rotate-[5deg] overflow-hidden shadow-button`}
-          >
-            <img
-              className="absolute inset-0 -z-10 h-full w-full object-cover"
-              src="/assets/img/catfish-2.jpg"
-              alt="landing"
-            />
-          </div>
+        <div
+          className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[280px] -left-[100px] -z-10  2xs:-top-[230px] 2xs:-left-[40px] md:left-[30px] rounded-xl rotate-[5deg] overflow-hidden shadow-button`}
+        >
+          <img
+            className="absolute inset-0 -z-10 h-full w-full object-cover"
+            src={images.catfish2}
+            alt=""
+          />
+        </div>
 
           {data.map((item, index) => (
             <div
@@ -96,19 +95,18 @@ export const WhatWeDo = forwardRef<HTMLElement>((props, ref) => {
               {index === 1 && (
                 <div className="mt-4">
                   <div className="bg-gray-100 border-2 border-white/50 rounded-xl w-full h-48 flex items-center justify-center text-gray-400 relative overflow-hidden">
-                    <img
-                      className="absolute inset-0 h-full w-full object-cover scale-140 bg-top-left"
-                      src="/assets/img/building-3.jpg"
-                      alt="landing"
-                    />
+                  <img
+                    className="absolute inset-0 h-full w-full object-cover scale-140 bg-top-left"
+                    src={images.building3}
+                    alt=""
+                  />
                   </div>
                 </div>
               )}
             </div>
           ))}
         </div>
-      </AnimatedSection>
-    </section>
+      </section>
   );
 });
 

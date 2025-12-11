@@ -3,14 +3,15 @@ import { ShoppingBag } from "lucide-react";
 import { ProductFeed } from "./ProductFeed.tsx";
 import { ProductFish } from "./ProductFish.tsx";
 import { motion, AnimatePresence } from "motion/react";
+import { images } from "../constants";
 
-export const Products = forwardRef<HTMLElement>((props, ref) => {
+export const Products = forwardRef<HTMLElement>((_props, ref) => {
   const [activeTab, setActiveTab] = useState<"feeds" | "fish">("feeds");
 
   const feeds = [
     {
-      sub: "/assets/img/hand-2mm-1.jpg",
-      img: "/assets/img/2mm-pr.png",
+      sub: images.hand2mm1,
+      img: images.feed2mm,
       title: "45% Protein – 2mm Floating Feed (Fry & Fingerlings)",
       desc: "ACME FEEDS – Super Starter 45% (2mm)",
       features: [
@@ -21,8 +22,8 @@ export const Products = forwardRef<HTMLElement>((props, ref) => {
       ],
     },
     {
-      sub: "/assets/img/hand-3mm.jpg",
-      img: "/assets/img/3mm-pr.png",
+      sub: images.hand3mm,
+      img: images.feed3mm,
       title: "42% Protein – 3mm Floating Feed (Advanced Fingerlings)",
       desc: "ACME FEEDS – PowerGrow 42% (3mm)",
       features: [
@@ -33,8 +34,8 @@ export const Products = forwardRef<HTMLElement>((props, ref) => {
       ],
     },
     {
-      sub: "/assets/img/hand-4mm.jpg",
-      img: "/assets/img/4mm-pr.png",
+      sub: images.hand4mm,
+      img: images.feed4mm,
       title: "42% Protein – 4mm Floating Feed (Juvenile Stage)",
       desc: "ACME FEEDS – Turbo Juvenile 42% (4mm)",
       features: [
@@ -45,8 +46,8 @@ export const Products = forwardRef<HTMLElement>((props, ref) => {
       ],
     },
     {
-      sub: "/assets/img/hand-6mm.jpg",
-      img: "/assets/img/6mm-pr.png",
+      sub: images.hand6mm,
+      img: images.feed6mm,
       title: "40% Protein – 6mm Floating Feed (Grower / Pre-Finishers)",
       desc: "ACME FEEDS – MegaGrow 40% (6mm)",
       features: [
@@ -57,8 +58,8 @@ export const Products = forwardRef<HTMLElement>((props, ref) => {
       ],
     },
     {
-      sub: "/assets/img/hand-9mm.jpg",
-      img: "/assets/img/9mm-pr.png",
+      sub: images.hand9mm,
+      img: images.feed9mm,
       title: "38% Protein – 9mm Floating Feed (Finisher / Adults)",
       desc: "ACME FEEDS – FinalMax 38% (9mm)",
       features: [
@@ -72,7 +73,7 @@ export const Products = forwardRef<HTMLElement>((props, ref) => {
   const fishes = [
     {
       title: "African Catfish (Clarias gariepinus)",
-      image: "/assets/img/catfish-4.jpg",
+      image: images.catfish4,
       features: [
         "Premium African delicacy with rich, bold flavour and firm flesh",
         "Perfect for pepper-soup, grilling, frying, smoking & oven dishes",
@@ -83,7 +84,7 @@ export const Products = forwardRef<HTMLElement>((props, ref) => {
     },
     {
       title: "Pangasius / Basa Fish",
-      image: "/assets/img/bang-2.jpg",
+      image: images.bang2,
       features: [
         "Mild-tasting, tender whitefish with boneless, smooth fillets",
         "Ideal for grilling, steaming, stir-fry & gourmet recipes",
@@ -94,7 +95,7 @@ export const Products = forwardRef<HTMLElement>((props, ref) => {
     },
     {
       title: "Tilapia (Oreochromis spp.)",
-      image: "/assets/img/tilapia-2.png",
+      image: images.tilapia2,
       features: [
         "Lightly flavoured fish with firm, delicious white flesh",
         "Versatile for whole grilling, frying, baking & spicy marinades",
@@ -108,6 +109,7 @@ export const Products = forwardRef<HTMLElement>((props, ref) => {
   return (
     <section
       ref={ref}
+      id={`products`}
       className="max-w-[1100px] mx-auto w-full pt-8 pb-16 xl:pb-24 px-5"
     >
       {/* Header */}
@@ -159,7 +161,7 @@ export const Products = forwardRef<HTMLElement>((props, ref) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
-        style={{ willChange: 'transform, opacity' }}
+        style={{ willChange: "transform, opacity" }}
         className="pt-[40px]"
       >
         <AnimatePresence mode="wait">

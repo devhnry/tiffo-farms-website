@@ -1,6 +1,5 @@
 import { forwardRef } from "react";
 import { Subheading } from "./Subheading.tsx";
-import { AnimatedSection } from "./AnimatedSection.tsx";
 import {
   Leaf,
   Scale,
@@ -41,6 +40,7 @@ export const CoreValues = forwardRef<HTMLElement>((_props, ref) => {
 
   return (
     <section
+      id={'values'}
       ref={ref}
       className={`max-w-[720px] px-5 xl:max-w-[1100px] mx-auto w-full mt-8 pb-16 xl:pb-24`}
     >
@@ -63,10 +63,9 @@ export const CoreValues = forwardRef<HTMLElement>((_props, ref) => {
         </p>
       </div>
 
-      <AnimatedSection>
-        <div
-          className={`bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-3 grid gap-4  lg:grid-cols-3 my-8`}
-        >
+      <div
+        className={`bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-3 grid gap-4  lg:grid-cols-3 my-8`}
+      >
           {data.map((item, index) => (
             <div
               key={index}
@@ -92,8 +91,7 @@ export const CoreValues = forwardRef<HTMLElement>((_props, ref) => {
             </div>
           ))}
         </div>
-      </AnimatedSection>
-    </section>
+      </section>
   );
 });
 
