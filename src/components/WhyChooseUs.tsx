@@ -63,30 +63,30 @@ export const WhyChooseUs = () => {
       <div
         className={`alternate-grid bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-3 flex flex-col gap-4 my-8 lg:grid grid-cols-3 relative`}
       >
-          <div
-            className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[260px] -right-[140px] 2xs:-top-[200px] 2xs:-right-[100px] md:-right-[70px] -z-10 rounded-xl rotate-[15deg] overflow-hidden shadow-fancy-two`}
-          >
-            <img
-              className="absolute inset-0 -z-10 h-full w-full object-cover"
-              src={images.catfish3}
-              alt=""
-            />
-          </div>
+        <div
+          className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[260px] -right-[140px] 2xs:-top-[200px] 2xs:-right-[100px] md:-right-[70px] -z-10 rounded-xl rotate-[15deg] overflow-hidden shadow-fancy-two`}
+        >
+          <img
+            className="absolute inset-0 -z-10 h-full w-full object-cover"
+            src={images.catfish3}
+            alt=""
+          />
+        </div>
 
-          <div
-            className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[295px] -right-[120px]  2xs:-top-[230px] 2xs:-right-[40px] md:right-[10px] -z-10 rounded-xl -rotate-[5deg] overflow-hidden shadow-button`}
-          >
-            <img
-              className="absolute inset-0 -z-10 h-full w-full object-cover"
-              src={images.catfish5}
-              alt=""
-            />
-          </div>
+        <div
+          className={`border-white border-[1.5px] bg-black/50 size-[150px] absolute -top-[295px] -right-[120px]  2xs:-top-[230px] 2xs:-right-[40px] md:right-[10px] -z-10 rounded-xl -rotate-[5deg] overflow-hidden shadow-button`}
+        >
+          <img
+            className="absolute inset-0 -z-10 h-full w-full object-cover"
+            src={images.catfish5}
+            alt=""
+          />
+        </div>
 
-          {data.map((item, index) => (
-            <div
-              key={index}
-              className={`
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className={`
                 ${
                   item.image
                     ? "grid sm:grid-cols-[250px_1fr] col-span-2 items-center gap-6"
@@ -94,31 +94,31 @@ export const WhyChooseUs = () => {
                 }
                 bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-4 flex flex-col gap-1
               `}
-            >
-              {item.image && (
-                <div className="max-w-[250px w-full min-h-[135px] h-full bg-gray-200 rounded-lg shadow-fancy-two relative overflow-hidden">
-                  <img
-                    className="absolute inset-0 h-full w-full object-cover"
-                    src={item.img}
-                    alt=""
-                  />
-                </div>
-              )}
-
-              <div>
-                <div
-                  className={`bg-[#115B02] rounded-2xl p-3 w-fit shadow-button mb-3`}
-                >
-                  {item.icon}
-                </div>
-                <h3 className={`text-[rgb(0,33,1)] text-[22px] font-bold`}>
-                  {item.title}
-                </h3>
-                <p className={`text-[#636363] text-[14px]`}>{item.desc}</p>
+          >
+            {item.image && (
+              <div className="max-w-[250px w-full min-h-[135px] h-full bg-gray-200 rounded-lg shadow-fancy-two relative overflow-hidden">
+                <img
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src={item.img}
+                  alt=""
+                />
               </div>
+            )}
+
+            <div>
+              <div
+                className={`bg-[#115B02] rounded-2xl p-3 w-fit shadow-button mb-3`}
+              >
+                {item.icon}
+              </div>
+              <h3 className={`text-[rgb(0,33,1)] text-[22px] font-bold`}>
+                {item.title}
+              </h3>
+              <p className={`text-[#636363] text-[14px]`}>{item.desc}</p>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };

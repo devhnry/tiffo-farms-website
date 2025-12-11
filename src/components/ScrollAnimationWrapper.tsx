@@ -26,7 +26,7 @@ const ScrollAnimationWrapper = ({
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView || alwaysRender ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ duration: 2, ease: [0.37,0,0.63,1] }}
       className={className}
       {...rest}
     >

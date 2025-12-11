@@ -40,7 +40,7 @@ export const CoreValues = forwardRef<HTMLElement>((_props, ref) => {
 
   return (
     <section
-      id={'values'}
+      id={"values"}
       ref={ref}
       className={`max-w-[720px] px-5 xl:max-w-[1100px] mx-auto w-full mt-8 pb-16 xl:pb-24`}
     >
@@ -66,32 +66,32 @@ export const CoreValues = forwardRef<HTMLElement>((_props, ref) => {
       <div
         className={`bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-3 grid gap-4  lg:grid-cols-3 my-8`}
       >
-          {data.map((item, index) => (
-            <div
-              key={index}
-              className={`
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className={`
         bg-[#F5F5F5] border-white border-[1.5px] shadow-fancy-two rounded-2xl p-4 flex flex-col gap-2
         ${index === 3 ? "lg:col-span-2 col-start-1/2" : ""}
         ${index === 4 ? "lg:col-start-3" : ""}
       `}
+          >
+            <div
+              className={`bg-[#115B02] rounded-2xl p-3 w-fit shadow-button mb-3`}
             >
-              <div
-                className={`bg-[#115B02] rounded-2xl p-3 w-fit shadow-button mb-3`}
-              >
-                {item.icon}
-              </div>
-
-              <h3 className={`text-[rgb(0,33,1)] text-[20px] font-bold`}>
-                {item.title}
-              </h3>
-
-              <p className={`text-[#636363] text-[14px] leading-[22px]`}>
-                {item.desc}
-              </p>
+              {item.icon}
             </div>
-          ))}
-        </div>
-      </section>
+
+            <h3 className={`text-[rgb(0,33,1)] text-[20px] font-bold`}>
+              {item.title}
+            </h3>
+
+            <p className={`text-[#636363] text-[14px] leading-[22px]`}>
+              {item.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 });
 

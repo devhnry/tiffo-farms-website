@@ -16,7 +16,7 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
 
   const activeSection = useActiveSection({ sectionRefs, offset: 80 });
   const scrollDirection = useScrollDirection();
-  
+
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
@@ -24,7 +24,7 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
       document.body.style.overflow = "";
     }
   }, [menuOpen]);
-  
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768 && menuOpen) {
@@ -34,7 +34,7 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [menuOpen]);
-  
+
   const scrollToSection = (sectionId: string) => {
     // Add a slight delay to ensure the page is fully loaded
     setTimeout(() => {
@@ -93,7 +93,7 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
           ))}
         </div>
         <button
-          onClick={() => scrollToSection('contact')}
+          onClick={() => scrollToSection("contact")}
           className={`bg-[#2D721A] cursor-pointer rounded-[14px] p-3 shadow-xl shadow-[#2D721A]/40 text-white font-medium hidden md:block`}
         >
           Contact Us
@@ -134,7 +134,7 @@ export const Navbar = ({ sectionRefs }: NavbarProps) => {
               ))}
             </div>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection("contact")}
               className={`w-full bg-[#2D721A] cursor-pointer rounded-[14px] p-3 shadow-xl shadow-[#2D721A]/40 text-white font-bold`}
             >
               Contact Us

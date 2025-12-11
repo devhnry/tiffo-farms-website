@@ -75,38 +75,38 @@ export const WhatWeDo = forwardRef<HTMLElement>((_props, ref) => {
           />
         </div>
 
-          {data.map((item, index) => (
-            <div
-              key={index}
-              className={`
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className={`
                 bg-[#F5F5F5] border-white border-[1.5px] font-medium shadow-fancy-two rounded-2xl p-4 flex flex-col gap-1
                 ${index === 1 ? "2md:row-span-2" : ""}
               `}
+          >
+            <div
+              className={`bg-[#115B02] rounded-2xl p-3 w-fit shadow-button mb-3`}
             >
-              <div
-                className={`bg-[#115B02] rounded-2xl p-3 w-fit shadow-button mb-3`}
-              >
-                {item.icon}
-              </div>
-              <h3 className={`text-[rgb(0,33,1)] text-[22px] font-bold`}>
-                {item.title}
-              </h3>
-              <p className={`text-[#636363] text-[14px]`}>{item.desc}</p>
-              {index === 1 && (
-                <div className="mt-4">
-                  <div className="bg-gray-100 border-2 border-white/50 rounded-xl w-full h-48 flex items-center justify-center text-gray-400 relative overflow-hidden">
+              {item.icon}
+            </div>
+            <h3 className={`text-[rgb(0,33,1)] text-[22px] font-bold`}>
+              {item.title}
+            </h3>
+            <p className={`text-[#636363] text-[14px]`}>{item.desc}</p>
+            {index === 1 && (
+              <div className="mt-4">
+                <div className="bg-gray-100 border-2 border-white/50 rounded-xl w-full h-48 flex items-center justify-center text-gray-400 relative overflow-hidden">
                   <img
                     className="absolute inset-0 h-full w-full object-cover scale-140 bg-top-left"
                     src={images.building3}
                     alt=""
                   />
-                  </div>
                 </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
   );
 });
 
